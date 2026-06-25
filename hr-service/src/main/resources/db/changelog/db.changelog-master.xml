@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <include file="db/changelog/changes/001-create-employees.sql"/>
+    <include file="db/changelog/changes/002-create-leave-requests.sql"/>
+    <include file="db/changelog/changes/003-create-payroll-records.sql"/>
+    <include file="db/changelog/changes/004-create-salary-history.sql"/>
+    <include file="db/changelog/changes/005-create-employee-benefits.sql"/>
+    <include file="db/changelog/changes/006-create-tax-summaries.sql"/>
+    <include file="db/changelog/changes/007-create-performance-reviews.sql"/>
+
+</databaseChangeLog>

@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/001-create-employees.sql
+  - include:
+      file: db/changelog/changes/002-create-leave-requests.sql
+  - include:
+      file: db/changelog/changes/003-create-payroll-records.sql
+  - include:
+      file: db/changelog/changes/004-create-salary-history.sql
+  - include:
+      file: db/changelog/changes/005-create-employee-benefits.sql
+  - include:
+      file: db/changelog/changes/006-create-tax-summaries.sql
+  - include:
+      file: db/changelog/changes/007-create-performance-reviews.sql
+
