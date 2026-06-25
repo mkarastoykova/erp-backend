@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/001-create-tax-definitions.sql
+  - include:
+      file: db/changelog/changes/002-create-payment-term-defs.sql
+  - include:
+      file: db/changelog/changes/003-create-invoices.sql
+  - include:
+      file: db/changelog/changes/004-create-invoice-lines.sql
+  - include:
+      file: db/changelog/changes/005-create-bills.sql
+  - include:
+      file: db/changelog/changes/006-create-bill-lines.sql
+  - include:
+      file: db/changelog/changes/007-create-incoming-payments.sql
+  - include:
+      file: db/changelog/changes/008-create-outgoing-payments.sql
+  - include:
+      file: db/changelog/changes/009-create-journal-entries.sql
+
