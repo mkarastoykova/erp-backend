@@ -1,0 +1,61 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: hr-service
+          uri: lb://hr-service
+          predicates:
+            - Path=/api/hr/**
+        - id: finance-service
+          uri: lb://finance-service
+          predicates:
+            - Path=/api/finance/**
+        - id: crm-service
+          uri: lb://crm-service
+          predicates:
+            - Path=/api/crm/**
+        - id: inventory-service
+          uri: lb://inventory-service
+          predicates:
+            - Path=/api/inventory/**
+        - id: payments-service
+          uri: lb://payments-service
+          predicates:
+            - Path=/api/payments/**
+        - id: catalog-service
+          uri: lb://catalog-service
+          predicates:
+            - Path=/api/catalog/**
+        - id: purchasing-service
+          uri: lb://purchasing-service
+          predicates:
+            - Path=/api/purchasing/**
+        - id: sales-service
+          uri: lb://sales-service
+          predicates:
+            - Path=/api/sales/**
+        - id: settings-service
+          uri: lb://settings-service
+          predicates:
+            - Path=/api/settings/**
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
